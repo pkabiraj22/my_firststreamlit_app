@@ -48,7 +48,7 @@ try:
 except URLerror as e:
    streamlit.error()
 #dont run past any thing 
-streamlit.stop()
+#streamlit.stop()
 
 
 streamlit.header("The fruit load list Contains:")
