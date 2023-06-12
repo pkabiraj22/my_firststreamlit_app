@@ -48,7 +48,7 @@ try:
 except URLerror as e:
    streamlit.error()
 #dont run past any thing 
-#streamlit.stop()
+
 
 
 streamlit.header("The fruit load list Contains:")
@@ -67,12 +67,7 @@ if streamlit.button('Get Fruit Load List'):
 #streamlit.header("The fruit load list Contains:")
    streamlit.dataframe(my_data_row)
 
-my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
-#my_cur = my_cnx.cursor()
-#my_cur.execute("select * from pc_rivery_db.public.fruit_load_list")
-my_data_row = get_fruit_load_list()
-#streamlit.header("The fruit load list Contains:")
-streamlit.dataframe(my_data_row)
+streamlit.stop()
 
 add_my_fruit = streamlit.text_input('What fruit would you like to have?','Jackfruit')
 streamlit.write('Thanks for Adding', add_my_fruit)
