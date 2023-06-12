@@ -34,7 +34,7 @@ try:
 #streamlit.write('The user entered ', fruit_choice)
   if not fruit_choice:
     streamlit.error('Please select fruit for information')
-   else:
+  else:
       fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
 # write your own comment - Normalize semi-structured JSON data into a flat table 
       fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
